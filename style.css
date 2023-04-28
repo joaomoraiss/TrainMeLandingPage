@@ -2,42 +2,41 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background-image:url(/resources/images/6195005.jpg);
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  
+  background-position: center;
 }
 
 .left-section {
   display: flex;
-  margin-left: 30px;
-  margin-top: 15px;
+  margin-left: 50px;
+  margin-top: 20px;
 }
 
 .logoName {
   margin-right: 0.5em;
   font-weight: 700;
-  font-size: 1.9em;
+  font-size: 2em;
   letter-spacing: 0.4px;
   color: rgb(226, 226, 226);
 }
 
 .logoImage {
-  margin-top: 6px;
+  margin-top: 7px;
   aspect-ratio: 16/9;
   height: 20px;
 }
 
 .logoImage img{
-  height: 36px;
+  height: 32px;
 }
 
 .right-section {
   display: flex;
   justify-content: space-between;
   width: 30em;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 header {
