@@ -29,7 +29,7 @@ body {
 }
 
 .logoImage img{
-  height: 32px;
+  height: 30px;
 }
 
 .right-section {
@@ -37,6 +37,7 @@ body {
   justify-content: space-between;
   width: 30em;
   margin-top: 20px;
+  margin-right: 10px;
 }
 
 header {
@@ -60,9 +61,30 @@ header {
   transition: 0.5s;
 }
 
+.menuButton{
+  display: none;
+  color: white;
+  cursor: pointer;
+}
+
 .right-section button:hover{
   color: black;
   background-color:rgb(226, 226, 226) ;
   border: black;
 }
+
+.right-section button:active{
+  scale: 0.80;
+}
+
+@media(max-width: 992px){
+  .right-section{
+    display: none;
+  }
+
+  .menuButton{
+    display: block;
+  }
+}
+
 
