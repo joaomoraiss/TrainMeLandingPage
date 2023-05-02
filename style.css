@@ -8,9 +8,13 @@ body {
   background-position: center;
 }
 
+li{
+  list-style: none;
+}
+
 .left-section {
   display: flex;
-  margin-left: 50px;
+  margin-left: 45px;
   margin-top: 20px;
 }
 
@@ -40,10 +44,11 @@ body {
   margin-right: 10px;
 }
 
-header {
+header{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding:0 2rem;
 }
 
 .right-section button{
@@ -61,8 +66,9 @@ header {
   transition: 0.5s;
 }
 
-.menuButton{
+.menuBar{
   display: none;
+  font-size: 1.3rem;
   color: white;
   cursor: pointer;
 }
@@ -78,11 +84,11 @@ header {
 }
 
 @media(max-width: 992px){
-  .right-section{
+  .right-section button{
     display: none;
   }
 
-  .menuButton{
+  .menuBar{
     display: block;
   }
 }
