@@ -4,7 +4,7 @@ body {
   background-image:url(/resources/images/6195005.jpg);
   min-height: 100vh;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
 }
 
@@ -16,6 +16,8 @@ li{
   display: flex;
   margin-left: 45px;
   margin-top: 20px;
+  transition: 0.8s;
+  cursor: pointer;
 }
 
 .logoName {
@@ -24,6 +26,11 @@ li{
   font-size: 2em;
   letter-spacing: 0.4px;
   color: rgb(226, 226, 226);
+  
+}
+
+.left-section:hover{
+  scale: 1.2;
 }
 
 .logoImage {
@@ -32,14 +39,15 @@ li{
   height: 20px;
 }
 
+
 .logoImage img{
-  height: 30px;
+  height: 35px;
 }
 
 .right-section {
   display: flex;
   justify-content: space-between;
-  width: 30em;
+  width: 28.5em;
   margin-top: 20px;
   margin-right: 10px;
 }
