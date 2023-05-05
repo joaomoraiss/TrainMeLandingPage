@@ -1,14 +1,16 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background-image:url(/resources/images/6195005.jpg);
+  background-image: url(/resources/images/6195005.jpg);
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: 100%;
+  overflow: hidden;
 }
 
-li{
+li {
   list-style: none;
 }
 
@@ -23,14 +25,13 @@ li{
 .logoName {
   margin-right: 0.5em;
   font-weight: 700;
-  font-size: 2em;
+  font-size: 3em;
   letter-spacing: 0.4px;
   color: rgb(226, 226, 226);
-  
 }
 
-.left-section:hover{
-  scale: 1.2;
+.left-section:hover {
+  scale: 1.1;
 }
 
 .logoImage {
@@ -39,9 +40,9 @@ li{
   height: 20px;
 }
 
-
-.logoImage img{
-  height: 35px;
+.logoImage img {
+  height: 50px;
+  margin-top: 5px;
 }
 
 .right-section {
@@ -52,14 +53,62 @@ li{
   margin-right: 10px;
 }
 
-header{
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:0 2rem;
+  padding: 0 2rem;
 }
 
-.right-section button{
+.right-section button {
+  font-style: "Poppins";
+  background-color: transparent;
+  font-size: 0.9em;
+  border-style: solid;
+  font-weight: 700;
+  height: 2.2em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  border-radius: 1em;
+  cursor: pointer;
+  color: rgb(226, 225, 225);
+  border-color: rgb(226, 226, 226);
+  transition: 0.5s;
+}
+
+.menuBar {
+  display: none;
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdownBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dropdownMenu {
+  position: absolute;
+  right: 2.4rem;
+  width: 180px;
+  height: 0;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+  transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdownMenu.open {
+  height: 200px;
+}
+
+.dropdownMenu button {
   font-style: "Poppins";
   background-color: transparent;
   border-style: solid;
@@ -67,38 +116,128 @@ header{
   height: 2em;
   padding-left: 1.3em;
   padding-right: 1.3em;
-  border-radius:1em ;
+  border-radius: 1em;
   cursor: pointer;
   color: rgb(226, 225, 225);
   border-color: rgb(226, 226, 226);
   transition: 0.5s;
+  margin-top: 15px;
+  border-width: 1px;
 }
 
-.menuBar{
-  display: none;
-  font-size: 1.3rem;
-  color: white;
-  cursor: pointer;
-}
-
-.right-section button:hover{
+.dropdownMenu button:hover {
   color: black;
-  background-color:rgb(226, 226, 226) ;
+  background-color: rgb(226, 226, 226);
   border: black;
 }
 
-.right-section button:active{
-  scale: 0.80;
+.right-section button:hover {
+  color: black;
+  background-color: rgb(226, 226, 226);
+  border: black;
 }
 
-@media(max-width: 992px){
-  .right-section button{
+.right-section button:active {
+  scale: 0.8;
+}
+
+@media (max-width: 992px) {
+  body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .right-section button {
     display: none;
   }
 
-  .menuBar{
+  .menuBar {
+    display: block;
+  }
+
+  .left-section {
+    margin-left: 25px;
+  }
+
+  .logoName {
+    font-size: 1.5rem;
+    width: 110px;
+  }
+
+  .logoImage {
+    font-size: 26, 25px;
+    margin-top: 0;
+  }
+
+  .logoImage img {
+    height: 28px;
+    margin-top: 4px;
+  }
+
+  .dropdownMenu {
     display: block;
   }
 }
 
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftMain{
+  margin-left: 15px;
+}
+
+.leftMain,
+.rightMain {
+  transition: 1s;
+}
+
+.middleMain {
+  margin-left: 50px;
+}
+
+.middleMain h2 {
+  color: rgb(226, 226, 226);
+  font-size: 90px;
+}
+
+.startBtn,
+.meTitle {
+  color: rgb(108, 99, 255);
+  cursor: pointer;
+}
+
+.leftMain:hover,
+.rightMain:hover {
+  scale: 1.1;
+}
+
+.startBtn{
+  font-size: 90px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+}
+
+.startBtn::before {
+  margin-left: auto;
+}
+
+.startBtn::after, .startBtn::before {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: rgb(108, 99, 255);
+  display: block;
+  transition: 0.5s;
+}
+
+.startBtn:hover::after, .startBtn:hover::before {
+  width: 100%;
+}
 

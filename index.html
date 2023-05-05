@@ -10,16 +10,22 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Train Me</title>
-    <link rel="icon" type="image/x-icon" href="/resources/images/barbell.png">
-
+    <link rel="icon" type="image/x-icon" href="/resources/images/barbell.png" />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <header>
       <div class="left-section">
-        <div class="logoName">Train Me</div>
+        <div class="logoName">Train <span class="meTitle">Me</span></div>
         <div class="logoImage">
           <img src="/resources/images/barbell.png" alt="dumbbell" />
         </div>
@@ -38,9 +44,39 @@
           <button>Contact</button>
         </div>
         <div class="menuBar">
-            <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-bars"></i>
         </div>
       </div>
     </header>
+    <div class="dropdownMenu">
+      <div class="dropdownBtn">
+        <div class="homeButton">
+          <button>Home</button>
+        </div>
+        <div class="servicesButton">
+          <button>Services</button>
+        </div>
+        <div class="aboutButton">
+          <button>About</button>
+        </div>
+        <div class="contactButton">
+          <button>Contact</button>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="leftMain">
+        <img src="/resources/images/undraw_personal_training_0dqn.svg" alt="" />
+      </section>
+      <section class="middleMain">
+        <h2>
+          The time for you to <button class="startBtn">Start</button> is right now
+        </h2>
+      </section>
+      <section class="rightMain">
+        <img src="/resources/images/undraw_fitness_tracker_3033.svg" alt="" />
+      </section>
+    </main>
   </body>
 </html>
+
